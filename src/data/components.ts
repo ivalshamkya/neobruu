@@ -1,10 +1,12 @@
 import Button from '@/components/neobruu/Button'
 import Toast from '@/components/neobruu/Toast'
 import Alert from '@/components/neobruu/Alert'
+import Badge from '@/components/neobruu/Badge'
 
 import ButtonExample from '@/components/example/ButtonExample'
 import ToastExample from '@/components/example/ToastExample'
 import AlertExample from '@/components/example/AlertExample'
+import BadgeExample from '@/components/example/BadgeExample'
 
 type ComponentObj = {
   name: string
@@ -35,6 +37,14 @@ const components: ComponentObj[] = [
     name: 'Alert',
     component: Alert,
     exampleComponent: AlertExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Badge',
+    component: Badge,
+    exampleComponent: BadgeExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },

@@ -16,7 +16,7 @@ export default function Component({
 }: Props) {
   return (
     <div id={name} className="relative">
-      <h2 className="mb-5 text-2xl font-bold">{name}</h2>
+      <h2 className="mb-5 text-4xl font-bold">{name}</h2>
 
       <ComponentWrapper>{exampleComponent}</ComponentWrapper>
 
