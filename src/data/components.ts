@@ -9,6 +9,8 @@ import AlertExample from '@/components/example/AlertExample'
 import BadgeExample from '@/components/example/BadgeExample'
 import Checkbox from '@/components/neobruu/Checkbox'
 import CheckboxExample from '@/components/example/CheckboxExample'
+import Avatar from '@/components/neobruu/Avatar'
+import AvatarExample from '@/components/example/AvatarExample'
 
 type ComponentObj = {
   name: string
@@ -55,6 +57,14 @@ const components: ComponentObj[] = [
     name: 'Checkbox',
     component: Checkbox,
     exampleComponent: CheckboxExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Avatar',
+    component: Avatar,
+    exampleComponent: AvatarExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },
