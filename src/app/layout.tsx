@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${ibm.className} selection:bg-blue-400`}>
+      <body className={`${ibm.className} selection:bg-violet-300`}>
         <Navbar />
         {children}
       </body>
