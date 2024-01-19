@@ -7,6 +7,8 @@ import ButtonExample from '@/components/example/ButtonExample'
 import ToastExample from '@/components/example/ToastExample'
 import AlertExample from '@/components/example/AlertExample'
 import BadgeExample from '@/components/example/BadgeExample'
+import Checkbox from '@/components/neobruu/Checkbox'
+import CheckboxExample from '@/components/example/CheckboxExample'
 
 type ComponentObj = {
   name: string
@@ -45,6 +47,14 @@ const components: ComponentObj[] = [
     name: 'Badge',
     component: Badge,
     exampleComponent: BadgeExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Checkbox',
+    component: Checkbox,
+    exampleComponent: CheckboxExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },
