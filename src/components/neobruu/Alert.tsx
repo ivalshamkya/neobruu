@@ -25,13 +25,13 @@ export default function Alert({
     const getColors = () => {
           switch (variant) {
             case 'primary':
-              return 'border-orange-700 bg-orange-300/70 text-zinc-800';
+              return 'border-orange-700 bg-orange-300/85 text-zinc-800';
             case 'secondary':
-                return 'border-pink-700 bg-pink-400/70 text-zinc-800';
+                return 'border-pink-700 bg-pink-400/85 text-zinc-800';
             case 'light':
-                return 'border-slate-300 bg-slate-50/70 text-zinc-800';
+                return 'border-slate-300 bg-slate-50/85 text-zinc-800';
             case 'dark':
-                return 'border-zinc-900 bg-zinc-800/70 text-white';
+                return 'border-zinc-900 bg-zinc-800/85 text-white';
             case 'blue':
                 return 'border-blue-500 bg-blue-400 text-zinc-800';
             default: 

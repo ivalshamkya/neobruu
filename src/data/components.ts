@@ -1,18 +1,20 @@
-import Button from '@/components/neobruu/Button'
-import Toast from '@/components/neobruu/Toast'
 import Alert from '@/components/neobruu/Alert'
+import Avatar from '@/components/neobruu/Avatar'
+import Button from '@/components/neobruu/Button'
 import Badge from '@/components/neobruu/Badge'
+import Checkbox from '@/components/neobruu/Checkbox'
+import Dropdown from '@/components/neobruu/Dropdown'
+import Toast from '@/components/neobruu/Toast'
+import Tooltip from '@/components/neobruu/Tooltip'
 
 import ButtonExample from '@/components/example/ButtonExample'
 import ToastExample from '@/components/example/ToastExample'
 import AlertExample from '@/components/example/AlertExample'
 import BadgeExample from '@/components/example/BadgeExample'
-import Checkbox from '@/components/neobruu/Checkbox'
 import CheckboxExample from '@/components/example/CheckboxExample'
-import Avatar from '@/components/neobruu/Avatar'
 import AvatarExample from '@/components/example/AvatarExample'
 import TooltipExample from '@/components/example/TooltipExample'
-import Tooltip from '@/components/neobruu/Tooltip'
+import DropdownExample from '@/components/example/DropdownExample'
 
 type ComponentObj = {
   name: string
@@ -75,6 +77,14 @@ const components: ComponentObj[] = [
     name: 'Tooltip',
     component: Tooltip,
     exampleComponent: TooltipExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Dropdown',
+    component: Dropdown,
+    exampleComponent: DropdownExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },

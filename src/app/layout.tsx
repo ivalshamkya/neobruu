@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter, IBM_Plex_Mono } from 'next/font/google'
+import { Inter, IBM_Plex_Mono, Darker_Grotesque, Bricolage_Grotesque } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 const ibm = IBM_Plex_Mono({ subsets: ['latin'], weight: "500" })
+const Grotesque = Darker_Grotesque({ subsets: ['latin'], weight: "500" })
+const bricolage = Bricolage_Grotesque({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'NeoBruu',
@@ -34,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${ibm.className} selection:bg-violet-300`}>
+      <body className={`${bricolage.className} selection:bg-blue-500/50`}>
         <Navbar />
         {children}
       </body>
