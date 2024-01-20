@@ -11,6 +11,8 @@ import Checkbox from '@/components/neobruu/Checkbox'
 import CheckboxExample from '@/components/example/CheckboxExample'
 import Avatar from '@/components/neobruu/Avatar'
 import AvatarExample from '@/components/example/AvatarExample'
+import TooltipExample from '@/components/example/TooltipExample'
+import Tooltip from '@/components/neobruu/Tooltip'
 
 type ComponentObj = {
   name: string
@@ -65,6 +67,14 @@ const components: ComponentObj[] = [
     name: 'Avatar',
     component: Avatar,
     exampleComponent: AvatarExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Tooltip',
+    component: Tooltip,
+    exampleComponent: TooltipExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },
