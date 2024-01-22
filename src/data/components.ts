@@ -4,6 +4,7 @@ import Button from '@/components/neobruu/Button'
 import Badge from '@/components/neobruu/Badge'
 import Checkbox from '@/components/neobruu/Checkbox'
 import Dropdown from '@/components/neobruu/Dropdown'
+import Input from '@/components/neobruu/Input'
 import Toast from '@/components/neobruu/Toast'
 import Tooltip from '@/components/neobruu/Tooltip'
 import Tabs from '@/components/neobruu/Tabs'
@@ -17,9 +18,11 @@ import AvatarExample from '@/components/example/AvatarExample'
 import TooltipExample from '@/components/example/TooltipExample'
 import DropdownExample from '@/components/example/DropdownExample'
 import TabsExample from '@/components/example/TabsExample'
+import InputExample from '@/components/example/InputExample'
 
 type ComponentObj = {
   name: string
+  sub?: string
   component: any
   exampleComponent?: any
   prevComponent?: string
@@ -95,6 +98,15 @@ const components: ComponentObj[] = [
     name: 'Tabs',
     component: Tabs,
     exampleComponent: TabsExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Input',
+    sub: 'Displays a form input field or a component that looks like an input field.',
+    component: Input,
+    exampleComponent: InputExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },

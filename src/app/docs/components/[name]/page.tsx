@@ -53,6 +53,7 @@ export default async function Installation({
     <>
       <Component
         name={params.name}
+        sub={currentComponent.sub}
         component={code}
         exampleComponent={<currentComponent.exampleComponent />}
       />
