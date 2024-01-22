@@ -17,7 +17,7 @@ export default function Badge({
             case 'secondary':
                 return 'border-pink-700 bg-pink-500/70';
             case 'light':
-                return 'border-slate-300 bg-slate-50/70';
+                return 'text-zinc-900 border-slate-300 bg-slate-50/70';
             case 'dark':
                 return 'border-zinc-900 bg-zinc-700/70 text-white';
             case 'blue':

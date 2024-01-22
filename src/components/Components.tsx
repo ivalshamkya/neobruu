@@ -6,6 +6,7 @@ import CopyCode from '@/components/CopyCode'
 type Props = {
   name: string
   sub?: string
+  isNew?: boolean
   component: string
   exampleComponent: JSX.Element
 }
@@ -13,6 +14,7 @@ type Props = {
 export default function Component({
   name,
   sub = '',
+  isNew = false,
   component,
   exampleComponent,
 }: Props) {
