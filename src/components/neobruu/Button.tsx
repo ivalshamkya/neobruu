@@ -39,7 +39,7 @@ export default function Button({
             role="button"
             aria-label="Click to perform an action"
             onClick={onClick}
-            className={`flex cursor-pointer items-center gap-1 text-xs md:text-lg rounded-${rounded} border ${getColors()} px-4 md:px-5 py-2 md:py-3 font-medium shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none`}
+            className={`flex cursor-pointer items-center gap-1 text-xs md:text-lg rounded-${rounded} border-2 ${getColors()} px-4 md:px-5 py-2 md:py-3 font-medium shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none`}
         >
             {children}
         </button>

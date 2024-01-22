@@ -6,6 +6,7 @@ import Checkbox from '@/components/neobruu/Checkbox'
 import Dropdown from '@/components/neobruu/Dropdown'
 import Toast from '@/components/neobruu/Toast'
 import Tooltip from '@/components/neobruu/Tooltip'
+import Tabs from '@/components/neobruu/Tabs'
 
 import ButtonExample from '@/components/example/ButtonExample'
 import ToastExample from '@/components/example/ToastExample'
@@ -15,6 +16,7 @@ import CheckboxExample from '@/components/example/CheckboxExample'
 import AvatarExample from '@/components/example/AvatarExample'
 import TooltipExample from '@/components/example/TooltipExample'
 import DropdownExample from '@/components/example/DropdownExample'
+import TabsExample from '@/components/example/TabsExample'
 
 type ComponentObj = {
   name: string
@@ -85,6 +87,14 @@ const components: ComponentObj[] = [
     name: 'Dropdown',
     component: Dropdown,
     exampleComponent: DropdownExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Tabs',
+    component: Tabs,
+    exampleComponent: TabsExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },
