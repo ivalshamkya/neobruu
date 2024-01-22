@@ -3,9 +3,9 @@ import Pagination from '@/components/Pagination'
 export default function Introduction() {
   return (
     <div>
-      <h2 className="text-2xl font-bold">Introduction</h2>
+      <h2 className="text-4xl font-bold">Introduction</h2>
 
-      <div className="mt-8 font-thin leading-relaxed">
+      <div className="mt-8 text-lg font-light leading-relaxed">
         Neobrutalism components is a collection of type-safe components written
         in React and Tailwind.
         <br />
