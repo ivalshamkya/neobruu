@@ -35,7 +35,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link
-              href={`https://github.com/ekmas/neobrutalism-components`}
+              href={`https://github.com/ivalshamkya/NeoBruu`}
               target='_blank'
               >
               <Button variant='dark' rounded='lg'>

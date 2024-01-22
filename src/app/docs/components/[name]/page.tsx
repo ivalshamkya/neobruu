@@ -54,6 +54,7 @@ export default async function Installation({
       <Component
         name={params.name}
         sub={currentComponent.sub}
+        isNew={currentComponent.isNew}
         component={code}
         exampleComponent={<currentComponent.exampleComponent />}
       />

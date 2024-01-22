@@ -36,7 +36,7 @@ function Navbar() {
             <SearchBar />
             <a
             target="_blank"
-            href="https://github.com/ekmas/neobrutalism-components"
+            href="https://github.com/ivalshamkya/NeoBruu"
             className="flex items-center justify-center rounded-md bg-zinc-900 border border-zinc-600 p-[5px] md:p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] shadow-black transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none dark:shadow-zinc-400"
             >
             <AiFillGithub className="h-6 w-6 text-white" />

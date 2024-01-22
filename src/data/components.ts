@@ -25,6 +25,7 @@ import TextareaExample from '@/components/example/TextareaExample'
 type ComponentObj = {
   name: string
   sub?: string
+  isNew?: boolean
   component: any
   exampleComponent?: any
   prevComponent?: string
@@ -34,6 +35,7 @@ type ComponentObj = {
 const components: ComponentObj[] = [
   {
     name: 'Button',
+    sub: 'button',
     component: Button,
     exampleComponent: ButtonExample,
     prevComponent: 'Badge',
@@ -42,6 +44,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Toast',
+    sub: 'Toast',
     component: Toast,
     exampleComponent: ToastExample,
     prevComponent: 'Badge',
@@ -50,6 +53,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Alert',
+    sub: 'alert',
     component: Alert,
     exampleComponent: AlertExample,
     prevComponent: 'Badge',
@@ -66,6 +70,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Checkbox',
+    sub: 'Checkbox',
     component: Checkbox,
     exampleComponent: CheckboxExample,
     prevComponent: 'Badge',
@@ -74,6 +79,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Avatar',
+    sub: 'Avatar',
     component: Avatar,
     exampleComponent: AvatarExample,
     prevComponent: 'Badge',
@@ -82,6 +88,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Tooltip',
+    sub: 'Tooltip',
     component: Tooltip,
     exampleComponent: TooltipExample,
     prevComponent: 'Badge',
@@ -90,6 +97,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Dropdown',
+    sub: 'Dropdown',
     component: Dropdown,
     exampleComponent: DropdownExample,
     prevComponent: 'Badge',
@@ -98,6 +106,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Tabs',
+    sub: 'Tabs',
     component: Tabs,
     exampleComponent: TabsExample,
     prevComponent: 'Badge',
@@ -115,7 +124,8 @@ const components: ComponentObj[] = [
 
   {
     name: 'Textarea',
-    sub: 'Displays a form input field or a component that looks like an input field.',
+    sub: 'Displays a form textarea field or a component that looks like an textarea.',
+    isNew: true,
     component: Textarea,
     exampleComponent: TextareaExample,
     prevComponent: 'Badge',
