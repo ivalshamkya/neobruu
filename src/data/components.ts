@@ -8,6 +8,7 @@ import Input from '@/components/neobruu/Input'
 import Toast from '@/components/neobruu/Toast'
 import Tooltip from '@/components/neobruu/Tooltip'
 import Tabs from '@/components/neobruu/Tabs'
+import Textarea from '@/components/neobruu/Textarea'
 
 import ButtonExample from '@/components/example/ButtonExample'
 import ToastExample from '@/components/example/ToastExample'
@@ -19,6 +20,7 @@ import TooltipExample from '@/components/example/TooltipExample'
 import DropdownExample from '@/components/example/DropdownExample'
 import TabsExample from '@/components/example/TabsExample'
 import InputExample from '@/components/example/InputExample'
+import TextareaExample from '@/components/example/TextareaExample'
 
 type ComponentObj = {
   name: string
@@ -107,6 +109,15 @@ const components: ComponentObj[] = [
     sub: 'Displays a form input field or a component that looks like an input field.',
     component: Input,
     exampleComponent: InputExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Textarea',
+    sub: 'Displays a form input field or a component that looks like an input field.',
+    component: Textarea,
+    exampleComponent: TextareaExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },

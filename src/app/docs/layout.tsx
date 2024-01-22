@@ -14,7 +14,7 @@ export default function DocsLayout({
   return (
     <>
       <Sidebar />
-      <div className="docs ml-[320px] min-h-[100dvh] w-[full-250px] bg-[#00EB90] px-5 pt-[80px] border-l">
+      <div className="docs ml-[300px] min-h-[100vh] w-[full-250px] bg-[#00EB90] px-5 pt-[80px] border-l">
         <div className="mx-auto w-[700px] py-20">
           {children}
         </div>
