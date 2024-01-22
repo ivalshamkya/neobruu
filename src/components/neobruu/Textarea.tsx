@@ -1,19 +1,21 @@
 type Props = {
     name: string
-    type?: 'text' | 'email' | 'number' | 'password'
     value: string
     onChange: React.Dispatch<React.SetStateAction<string>>
     placeholder: string
+    rows?: number
+    resizeable?: boolean
     variant?: 'primary' | 'secondary' | 'light' | 'dark' | 'blue' | 'yellow' | 'green' | 'red';
-    rounded?: 'none' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+    rounded?: 'none' | 'sm' | 'md' | 'lg';
 }
 
-export default function Input({
+export default function Textarea({
     name,
-    type = "text",
     value,
     onChange,
     placeholder,
+    rows = 3,
+    resizeable = true,
     variant = 'primary',
     rounded = 'none'
 }: Props) {
@@ -42,16 +44,16 @@ export default function Input({
     }
 
     return (
-        <input
-            className={`rounded-${rounded} border-2 border-black p-[10px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none transition-all ${getColors()}`}
-            type={type}
+        <textarea
+            className={`rounded-${rounded} border-2 border-black p-[10px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none ${resizeable ? 'resize-y' : 'resize-none'} transition-all ${getColors()}`}
             name={name}
             placeholder={placeholder}
             value={value}
+            rows={rows}
             onChange={(e) => {
                 onChange(e.target.value)
             }}
             aria-label={placeholder}
-        />
+        ></textarea>
     )
 }
