@@ -36,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${bricolage.className} selection:bg-blue-500/50`}>
+      <body className={`${bricolage.className} bg-[#00EB90] selection:bg-blue-500/50`}>
         <Navbar />
         {children}
       </body>
