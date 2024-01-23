@@ -40,7 +40,6 @@ export default function Introduction() {
         <span>by</span>
         <span className="hover:dark:text-neutral-400 cursor-pointer">Ival Shamkya</span>
       </div>
-
     </div>
   )
 }

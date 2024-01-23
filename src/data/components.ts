@@ -2,6 +2,7 @@ import Alert from '@/components/neobruu/Alert'
 import Avatar from '@/components/neobruu/Avatar'
 import Button from '@/components/neobruu/Button'
 import Badge from '@/components/neobruu/Badge'
+import { Card } from '@/components/neobruu/Card'
 import Checkbox from '@/components/neobruu/Checkbox'
 import Dropdown from '@/components/neobruu/Dropdown'
 import Input from '@/components/neobruu/Input'
@@ -21,6 +22,7 @@ import DropdownExample from '@/components/example/DropdownExample'
 import TabsExample from '@/components/example/TabsExample'
 import InputExample from '@/components/example/InputExample'
 import TextareaExample from '@/components/example/TextareaExample'
+import CardExample from '@/components/example/CardExample'
 
 type ComponentObj = {
   name: string
@@ -128,6 +130,16 @@ const components: ComponentObj[] = [
     isNew: true,
     component: Textarea,
     exampleComponent: TextareaExample,
+    prevComponent: 'Badge',
+    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Card',
+    sub: 'Displays a form Card field or a component that looks like an Card.',
+    isNew: true,
+    component: Card,
+    exampleComponent: CardExample,
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },
