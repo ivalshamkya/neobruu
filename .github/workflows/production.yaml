@@ -7,8 +7,9 @@ on:
     branches:
       - main
 jobs:
-  Deploy-Production:
+  Production:
     runs-on: ubuntu-latest
+    environment: Production
     steps:
       - uses: actions/labeler@v2
         with:
