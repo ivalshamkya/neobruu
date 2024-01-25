@@ -2,8 +2,7 @@
 import { usePathname } from 'next/navigation';
 import components from '@/data/components';
 import Link from 'next/link';
-import Badge from './neobruu/Badge';
-import { metadata } from '@/app/layout';
+import Badge from '@/components/neobruu/Badge';
 
 export default function Sidebar() {
   const pathname = usePathname();

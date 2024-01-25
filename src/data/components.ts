@@ -2,7 +2,7 @@ import Alert from '@/components/neobruu/Alert'
 import Avatar from '@/components/neobruu/Avatar'
 import Button from '@/components/neobruu/Button'
 import Badge from '@/components/neobruu/Badge'
-import { Card } from '@/components/neobruu/Card'
+import Card from '@/components/neobruu/Card'
 import Checkbox from '@/components/neobruu/Checkbox'
 import Dropdown from '@/components/neobruu/Dropdown'
 import Input from '@/components/neobruu/Input'
@@ -37,7 +37,7 @@ type ComponentObj = {
 const components: ComponentObj[] = [
   {
     name: 'Button',
-    sub: 'button',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Button,
     exampleComponent: ButtonExample,
     prevComponent: 'Badge',
@@ -46,7 +46,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Toast',
-    sub: 'Toast',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Toast,
     exampleComponent: ToastExample,
     prevComponent: 'Badge',
@@ -55,7 +55,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Alert',
-    sub: 'alert',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Alert,
     exampleComponent: AlertExample,
     prevComponent: 'Badge',
@@ -64,6 +64,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Badge',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Badge,
     exampleComponent: BadgeExample,
     prevComponent: 'Badge',
@@ -72,7 +73,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Checkbox',
-    sub: 'Checkbox',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Checkbox,
     exampleComponent: CheckboxExample,
     prevComponent: 'Badge',
@@ -81,7 +82,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Avatar',
-    sub: 'Avatar',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Avatar,
     exampleComponent: AvatarExample,
     prevComponent: 'Badge',
@@ -90,7 +91,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Tooltip',
-    sub: 'Tooltip',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Tooltip,
     exampleComponent: TooltipExample,
     prevComponent: 'Badge',
@@ -99,7 +100,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Dropdown',
-    sub: 'Dropdown',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Dropdown,
     exampleComponent: DropdownExample,
     prevComponent: 'Badge',
@@ -108,7 +109,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Tabs',
-    sub: 'Tabs',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Tabs,
     exampleComponent: TabsExample,
     prevComponent: 'Badge',
@@ -117,7 +118,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Input',
-    sub: 'Displays a form input field or a component that looks like an input field.',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Input,
     exampleComponent: InputExample,
     prevComponent: 'Badge',
@@ -126,7 +127,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Textarea',
-    sub: 'Displays a form textarea field or a component that looks like an textarea.',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     isNew: true,
     component: Textarea,
     exampleComponent: TextareaExample,
@@ -136,7 +137,7 @@ const components: ComponentObj[] = [
 
   {
     name: 'Card',
-    sub: 'Displays a form Card field or a component that looks like an Card.',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
     isNew: true,
     component: Card,
     exampleComponent: CardExample,

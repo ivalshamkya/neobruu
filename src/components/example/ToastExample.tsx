@@ -1,7 +1,5 @@
 'use client'
-
 import Toast from "@/components/neobruu/Toast";
-import Button from "../neobruu/Button";
 import { useState } from "react";
 
 export default function ToastExample() {
