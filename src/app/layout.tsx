@@ -3,10 +3,10 @@ import { Inter, IBM_Plex_Mono, Darker_Grotesque, Bricolage_Grotesque } from 'nex
 import './globals.css'
 import Navbar from '@/components/Navbar'
 
-const inter = Inter({ subsets: ['latin'] })
-const ibm = IBM_Plex_Mono({ subsets: ['latin'], weight: "500" })
-const Grotesque = Darker_Grotesque({ subsets: ['latin'], weight: "500" })
-const bricolage = Bricolage_Grotesque({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
+const ibm = IBM_Plex_Mono({ subsets: ['latin'], weight: "500", display: 'swap', adjustFontFallback: false })
+const Grotesque = Darker_Grotesque({ subsets: ['latin'], weight: "500", display: 'swap', adjustFontFallback: false })
+const bricolage = Bricolage_Grotesque({ subsets: ['latin'], display: 'swap', adjustFontFallback: false })
 
 export const metadata: Metadata = {
   title: 'NeoBruu',

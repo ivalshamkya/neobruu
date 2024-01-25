@@ -3,18 +3,10 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { CgDarkMode, CgMoon, CgSun } from "react-icons/cg";
-import { IoIosMoon, IoIosSunny } from "react-icons/io";
-import { RiMoonClearFill } from "react-icons/ri";
 import SearchBar from "./SearchBar";
 
 function Navbar() {
   const [theme, setTheme] = useState<string>("");
-  const [search, setSearch] = useState<string>("");
-
-  const handleClick = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
 
   useEffect(() => {
     setTheme((prev) => localStorage.getItem("theme") ?? "light");
@@ -41,17 +33,6 @@ function Navbar() {
             >
             <AiFillGithub className="h-6 w-6 text-white" />
             </a>
-            {/* <button
-            type="button"
-            onClick={handleClick}
-            className="flex items-center justify-center rounded-md border border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] shadow-orange-400/40 transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none dark:border-zinc-600 dark:shadow-yellow-400/40"
-            >
-            {theme === "light" ? (
-                <IoIosSunny className="h-6 w-6 text-orange-400" />
-            ) : (
-                <RiMoonClearFill className="h-6 w-6 text-yellow-400" />
-            )}
-            </button> */}
         </div>
       </div>
     </nav>

@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import { useState, useEffect, ChangeEvent, useRef } from 'react';
+
+import components from '@/data/components';
 import { CgClose, CgSearch } from 'react-icons/cg';
 import { MdAdd, MdKeyboardCommandKey } from "react-icons/md";
-import components from '@/data/components'; // Update the path
-import Link from 'next/link';
 import { RxComponent1 } from "react-icons/rx";
 
 type SearchBarProps = {};
