@@ -1,35 +1,22 @@
-import { redirect } from 'next/navigation';
-import { useState, useEffect, ChangeEvent } from 'react';
-import { CgClose, CgMathPlus, CgSearch } from 'react-icons/cg';
+import { useState, useEffect, ChangeEvent, useRef } from 'react';
+import { CgClose, CgSearch } from 'react-icons/cg';
 import { MdAdd, MdKeyboardCommandKey } from "react-icons/md";
+import components from '@/data/components'; // Update the path
+import Link from 'next/link';
+import { RxComponent1 } from "react-icons/rx";
 
 type SearchBarProps = {};
 
-const actions = [
-  {
-    id: "blog",
-    name: "Blog",
-    shortcut: ["b"],
-    keywords: "writing words",
-    perform: () => redirect('blog'),
-  },
-  {
-    id: "contact",
-    name: "Contact",
-    shortcut: ["c"],
-    keywords: "email",
-    perform: () => redirect('contact'),
-  },
-];
-
-export default function SearchBar({}: SearchBarProps) {
+export default function SearchBar({ }: SearchBarProps) {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [searchValue, setSearchValue] = useState<string>('');
-  const [searchResults, setSearchResults] = useState<typeof actions>([]); // Use the same type as your actions
+  const [searchResults, setSearchResults] = useState<typeof components>([]);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+        setSearchResults(components);
         setIsSearchBarOpen((prev) => !prev);
       }
     };
@@ -41,16 +28,21 @@ export default function SearchBar({}: SearchBarProps) {
     };
   }, []);
 
+  useEffect(() => {
+    if (isSearchBarOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isSearchBarOpen]);
+
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setSearchValue(value);
 
-    // Filter actions based on keywords
-    const matchingActions = actions.filter((action) =>
-      action.keywords.toLowerCase().includes(value.toLowerCase())
+    const matchingComponents = components.filter((component) =>
+      component.name.toLowerCase().includes(value.toLowerCase())
     );
 
-    setSearchResults(matchingActions);
+    setSearchResults(matchingComponents);
   };
 
   const handleClose = () => {
@@ -67,31 +59,40 @@ export default function SearchBar({}: SearchBarProps) {
       >
         Search doc...
         <span className='flex items-center gap-0.5 bg-zinc-200 p-1 rounded text-xs text-primary'>
-          <MdKeyboardCommandKey /> <MdAdd/> K
+          <MdKeyboardCommandKey /> <MdAdd /> K
         </span>
       </button>
       {isSearchBarOpen && (
         <div className='fixed top-0 left-0 w-screen h-screen bg-black/50 z-50 grid place-items-center'>
           <div className="max-w-xl w-full bg-white border border-primary rounded-lg shadow-md dark:bg-zinc-900">
-            <div className='relative w-full h-fit rounded-lg overflow-hidden'>
-              <CgSearch className="text-2xl text-zinc-500 absolute left-2 top-1/4" />
+            <div className='relative w-full h-fit flex items-center rounded-lg overflow-hidden'>
+              <CgSearch className="text-lg text-zinc-500 absolute left-2 top-1/4" />
               <input
+                ref={inputRef}
                 type="text"
                 value={searchValue}
                 onChange={handleInputChange}
                 placeholder="Search documentation..."
-                className="w-full px-10 py-3 rounded-t-lg border-b border-black outline-none text-zinc-800"
+                className="w-full px-10 py-2 rounded-t-lg border-b border-black outline-none text-zinc-800"
               />
               <button onClick={handleClose}>
-                <CgClose className="text-2xl text-zinc-500 hover:text-zinc-900 absolute right-2 top-1/4" />
+                <CgClose className="text-lg text-zinc-500 hover:text-zinc-900 absolute right-2 top-1/4" />
               </button>
             </div>
-            {searchResults.map((result) => (
-              <button type='button' onClick={result.perform} key={result.id} className='w-full p-2 text-left rounded hover:bg-zinc-300'>
-                <p className='text-lg'>{result.name}</p>
-                <p className='text-sm'>{result.keywords}</p>
-              </button>
-            ))}
+            <div className='max-h-[300px] overflow-y-auto p-3'>
+              {searchResults.map((result) => (
+                <Link
+                  href={`/docs/components/${result.name}`}
+                  key={result.name}
+                  onClick={handleClose}
+                >
+                  <button className='w-full flex items-center gap-3 p-2 text-left rounded hover:bg-zinc-300'>
+                    <RxComponent1 className='text-xs' />
+                    <h1 className='font-light'>{result.name}</h1>
+                  </button>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       )}

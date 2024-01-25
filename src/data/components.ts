@@ -143,6 +143,8 @@ const components: ComponentObj[] = [
     prevComponent: 'Badge',
     nextComponent: 'Card',
   },
-]
+];
+
+components.sort((a, b) => a.name.localeCompare(b.name));
 
 export default components

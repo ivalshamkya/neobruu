@@ -26,10 +26,12 @@ export default function Sidebar() {
       </Link>
       <div className="block border-black p-4 text-xl font-bold uppercase">Components</div>
       {components.map((item, index) => (
-        <Link key={index} href={`/docs/components/${item.name}`} className={`flex gap-2 border-black p-3 pl-7 text-base hover:bg-[#ff4242]/70 ${isActive(`/docs/components/${item.name}`) ? 'font-bold text-white' : ''
-          }`}
+        <Link key={index} href={`/docs/components/${item.name}`} className={`flex gap-2 border-black p-3 pl-7 text-base hover:bg-[#ff4242]/70`}
         >
-          {item.name} {item.isNew && (
+          <span className={`${isActive(`/docs/components/${item.name}`) ? 'font-medium text-white' : ''}`}>
+          {item.name} 
+          </span>
+          {item.isNew && (
             <Badge text='New' rounded='md' variant='secondary' />
           )}
         </Link>

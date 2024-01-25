@@ -4,8 +4,8 @@ import Button from "../neobruu/Button";
 export default function CardExample() {
   return (
     <div className="flex gap-3">
-      <Card rounded="lg">
-        <Card.Header imageUrl="https://picsum.photos/200" />
+      <Card rounded="none">
+        <Card.Header imageUrl="https://picsum.photos/200.webp" />
         <Card.Body>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium rem cum nisi molestiae voluptatibus nemo eaque doloremque tempora incidunt laborum! Obcaecati ipsum ducimus ad aliquid cum delectus adipisci ratione dolores.
         </Card.Body>
