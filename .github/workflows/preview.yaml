@@ -7,9 +7,13 @@ on:
     branches-ignore:
       - main
 jobs:
-  Deploy-Preview:
+  Preview:
     runs-on: ubuntu-latest
+    environment: Preview
     steps:
+      - uses: actions/labeler@v2
+        with:
+            repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Node.js
