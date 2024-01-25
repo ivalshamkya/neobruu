@@ -27,13 +27,13 @@ function Card({ rounded = 'none', children }: CardProps) {
 
 Card.Header = function CardHeader({ imageUrl }: CardHeaderProps) {
     return (
-        <a href="" className="block cursor-pointer h-[250px]">
-            <article className="w-full h-[250px]">
-                <figure className="w-full h-[250px] border-black border-b-2">
+        <a href="" className="relative block cursor-pointer h-[300px]">
+            <article className="w-full h-[300px]">
+                <figure className="w-full h-[300px] border-black border-b-2">
                     <Image
                         src={imageUrl}
                         alt="thumbnail"
-                        className="w-full h-full object-cover"
+                        fill={true}
                     />
                 </figure>
             </article>
@@ -50,7 +50,7 @@ Card.Footer = function CardFooter({ children }: CardFooterProps) {
 
 Card.Body = function CardBody({ children }: CardBodyProps) {
     return (
-        <div className="px-6 py-5 text-left h-full">
+        <div className="px-6 py-5 text-justify h-full">
             {children}
         </div>
     );
