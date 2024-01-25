@@ -1,4 +1,4 @@
-import { Card } from "@/components/neobruu/Card";
+import Card from "@/components/neobruu/Card";
 import Button from "../neobruu/Button";
 
 export default function CardExample() {
