@@ -23,6 +23,8 @@ import TabsExample from '@/components/example/TabsExample'
 import InputExample from '@/components/example/InputExample'
 import TextareaExample from '@/components/example/TextareaExample'
 import CardExample from '@/components/example/CardExample'
+import Accordion from '@/components/neobruu/Accordion'
+import AccordionExample from '@/components/example/AccordionExample'
 
 type ComponentObj = {
   name: string
@@ -40,8 +42,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Button,
     exampleComponent: ButtonExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -49,8 +49,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Toast,
     exampleComponent: ToastExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -58,8 +56,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Alert,
     exampleComponent: AlertExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -67,8 +63,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Badge,
     exampleComponent: BadgeExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -76,8 +70,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Checkbox,
     exampleComponent: CheckboxExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -85,8 +77,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Avatar,
     exampleComponent: AvatarExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -94,8 +84,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Tooltip,
     exampleComponent: TooltipExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -103,8 +91,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Dropdown,
     exampleComponent: DropdownExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -112,8 +98,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Tabs,
     exampleComponent: TabsExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -121,8 +105,6 @@ const components: ComponentObj[] = [
     sub: 'Lorem ipsum dolor sit amet, consectetur',
     component: Input,
     exampleComponent: InputExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -131,8 +113,6 @@ const components: ComponentObj[] = [
     isNew: true,
     component: Textarea,
     exampleComponent: TextareaExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
   },
 
   {
@@ -141,11 +121,34 @@ const components: ComponentObj[] = [
     isNew: true,
     component: Card,
     exampleComponent: CardExample,
-    prevComponent: 'Badge',
-    nextComponent: 'Card',
+  },
+
+  {
+    name: 'Accordion',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
+    isNew: true,
+    component: Accordion,
+    exampleComponent: AccordionExample,
   },
 ];
 
 components.sort((a, b) => a.name.localeCompare(b.name));
+
+
+for (let i = 0; i < components.length; i++) {
+  const currentComponent = components[i];
+
+  if (i > 0) {
+    currentComponent.prevComponent = components[i - 1].name;
+  } else {
+    currentComponent.prevComponent = '';
+  }
+
+  if (i < components.length - 1) {
+    currentComponent.nextComponent = components[i + 1].name;
+  } else {
+    currentComponent.nextComponent = '';
+  }
+}
 
 export default components
