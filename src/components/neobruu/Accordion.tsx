@@ -1,5 +1,5 @@
 'use client'
-import React, { ReactElement, useEffect, useRef, useState } from 'react';
+import React, { ReactElement, createRef, useEffect, useRef, useState } from 'react';
 import { FiChevronDown, FiPlus } from 'react-icons/fi';
 
 type Props = {
@@ -66,7 +66,7 @@ export default function Accordion({ children }: Props) {
                 if (React.isValidElement(child)) {
                     if (child.type === Accordion.Item) {
                         const { children, value } = child.props as AccordionItemProps;
-                        contentRefs[value] = useRef<HTMLDivElement>(null);
+                        contentRefs[value] = createRef<HTMLDivElement>();
 
                         return React.cloneElement(child as ReactElement<AccordionItemProps & AccordionContentProps & AccordionTriggerProps>, {
                             key: value,
