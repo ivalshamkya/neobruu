@@ -21,7 +21,7 @@ export default function Button({
             case 'light':
                 return 'border-black bg-slate-50';
             case 'dark':
-                return 'border-black bg-zinc-900 text-white';
+                return 'border-white/10 bg-zinc-900 text-white';
             case 'blue':
                 return 'border-black bg-blue-500';
             case 'yellow':
