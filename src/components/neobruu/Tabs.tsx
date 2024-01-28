@@ -70,7 +70,7 @@ export default function Tabs({ children, variant = "primary", rounded = "none" }
                 onClick={() => handleTabClick(label)}
                 className={`cursor-pointer border-2 border-black ${
                   activeTab === label ? getColors() + ' font-bold' : getColors() + '/70' 
-                } px-6 py-3 text-center transition-colors first:rounded-ss-${rounded} last:rounded-se-${rounded}`}
+                } px-3 md:px-6 py-2 md:py-3 text-center transition-colors first:rounded-ss-${rounded} last:rounded-se-${rounded}`}
               >
                 {label}
               </button>

@@ -1,3 +1,4 @@
+import Accordion from '@/components/neobruu/Accordion'
 import Alert from '@/components/neobruu/Alert'
 import Avatar from '@/components/neobruu/Avatar'
 import Button from '@/components/neobruu/Button'
@@ -23,8 +24,9 @@ import TabsExample from '@/components/example/TabsExample'
 import InputExample from '@/components/example/InputExample'
 import TextareaExample from '@/components/example/TextareaExample'
 import CardExample from '@/components/example/CardExample'
-import Accordion from '@/components/neobruu/Accordion'
 import AccordionExample from '@/components/example/AccordionExample'
+import Drawer from '@/components/neobruu/Drawer'
+import DrawerExample from '@/components/example/DrawerExample'
 
 type ComponentObj = {
   name: string
@@ -129,6 +131,14 @@ const components: ComponentObj[] = [
     isNew: true,
     component: Accordion,
     exampleComponent: AccordionExample,
+  },
+
+  {
+    name: 'Drawer',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
+    isNew: true,
+    component: Drawer,
+    exampleComponent: DrawerExample,
   },
 ];
 

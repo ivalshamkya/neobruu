@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation'
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Button from './neobruu/Button'
 
 type Props = {
@@ -33,7 +33,7 @@ export default function Pagination({ prev, next }: Props) {
         <Button rounded='xl' variant='yellow' onClick={() => {
           router.push(prev.path)
         }}>
-          <FaArrowLeft className="mr-2" />
+          <FaChevronLeft className="mr-2" />
           {prev.name}
         </Button>
       )}
@@ -43,7 +43,7 @@ export default function Pagination({ prev, next }: Props) {
           router.push(next.path)
         }}>
           {next.name}
-          <FaArrowRight className="ml-2" />
+          <FaChevronRight className="ml-2" />
         </Button>
       )}
     </div>

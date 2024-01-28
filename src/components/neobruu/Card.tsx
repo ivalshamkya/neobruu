@@ -19,7 +19,7 @@ type CardBodyProps = {
 
 function Card({ rounded = 'none', children }: CardProps) {
     return (
-        <div className={`w-[350px] h-full border-black border-2 rounded-${rounded} shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white`}>
+        <div className={`w-full max-w-[350px] h-full border-black border-2 rounded-${rounded} shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white`}>
             {children}
         </div>
     );
@@ -27,16 +27,14 @@ function Card({ rounded = 'none', children }: CardProps) {
 
 Card.Header = function CardHeader({ imageUrl }: CardHeaderProps) {
     return (
-        <a href="" className="relative block cursor-pointer h-[300px]">
-            <article className="w-full h-[300px]">
-                <figure className="w-full h-[300px] border-black border-b-2">
-                    <Image
-                        src={imageUrl}
-                        alt="thumbnail"
-                        fill={true}
-                    />
-                </figure>
-            </article>
+        <a href="" className="relative block w-full max-h-[300px] min-h-[250px] cursor-pointer">
+                <Image
+                    src={imageUrl}
+                    alt="thumbnail"
+                    fill={true}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                />
         </a>
     );
 }

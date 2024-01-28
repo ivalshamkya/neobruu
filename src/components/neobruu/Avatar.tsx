@@ -15,6 +15,8 @@ export default function Avatar({
 }: Props) {
 
     return (
-        <Image src={src} alt={alt} className={`h-16 w-16 rounded-${rounded} border-2 border-black bg-cover bg-center shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] duration-300`}/>
+        <div className={`relative h-16 w-16 overflow-hidden rounded-${rounded} border-2 border-black bg-cover bg-center shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] duration-300`}>
+            <Image src={src} alt={alt} fill={true} />
+        </div>
     );
 }
