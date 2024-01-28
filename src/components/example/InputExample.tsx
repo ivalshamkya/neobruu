@@ -8,7 +8,7 @@ export default function InputExample() {
     const [value2, setValue2] = useState<string>('')
 
     return (
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
             <Input type='text' name='text' value={value1} placeholder='Text' onChange={setValue1} variant='dark' rounded='full'></Input>
             <Input type='text' name='text' value={value2} placeholder='Text' onChange={setValue2} rounded='md'></Input>
         </div>

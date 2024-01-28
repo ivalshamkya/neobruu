@@ -61,7 +61,7 @@ export default function Accordion({ children }: Props) {
 
 
     return (
-        <div className="w-[500px] border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+        <div className="w-full max-w-[500px] border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
             {React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
                     if (child.type === Accordion.Item) {

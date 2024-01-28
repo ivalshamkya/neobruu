@@ -56,10 +56,10 @@ export default function SearchBar({ }: SearchBarProps) {
     <div className="relative">
       <button
         onClick={() => setIsSearchBarOpen(true)}
-        className="flex items-center gap-20 rounded-md border border-black p-[5px] md:p-[10px] text-zinc-700 text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none transition-all focus:translate-x-[3px] focus:translate-y-[3px] focus:shadow-none"
+        className="flex items-center gap-2 rounded-md border border-black p-[5px] md:p-[10px] text-zinc-700 text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none transition-all focus:translate-x-[3px] focus:translate-y-[3px] focus:shadow-none"
       >
         Search doc...
-        <span className='flex items-center gap-0.5 bg-zinc-200 p-1 rounded text-xs text-primary'>
+        <span className='flex items-center md:gap-0.5 bg-zinc-200 p-0.5 md:p-1 rounded text-xs text-primary'>
           <MdKeyboardCommandKey /> <MdAdd /> K
         </span>
       </button>

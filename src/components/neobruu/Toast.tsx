@@ -1,46 +1,85 @@
 'use client'
-import { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-type Props = {
-  open: boolean;
-  title?: string;
-  children: React.ReactNode;
-  type?: 'success' | 'error' | 'info'; 
-  duration?: number; 
-}
-
-export default function Toast({ 
-    open = false,
-    title, 
-    children, 
-    type = 'info', 
-    duration = 39999000
-}: Props) {
-  const [isVisible, setIsVisible] = useState<boolean>(open);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsVisible(false);
-    }, duration);
-
-    return () => clearTimeout(timeoutId);
-  }, [duration]);
-
-  return (
-    isVisible && (
-      <div
-        className={`fixed bottom-4 right-4 rounded-lg shadow-md p-4 z-50 ${type === 'success' ? 'bg-green-500 text-white' : type === 'error' ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'}`}
-      >
-        {title && <h4 className="font-semibold">{title}</h4>}
-        <p className="mb-2">{children}</p>
-        <button
-          type="button"
-          className="text-gray-400 hover:text-gray-500"
-          onClick={() => setIsVisible(false)}
-        >
-          <svg className="inline-block w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-        </button>
-      </div>
-    )
-  );
+type ToastProps = {
+    active: boolean;
+    setActive: React.Dispatch<React.SetStateAction<boolean>>;
+    children: React.ReactNode;
+    variant?: 'primary' | 'secondary' | 'light' | 'dark' | 'blue' | 'yellow' | 'green' | 'red' | 'pink';
+    duration?: number;
 };
+
+export default function Toast({ active, setActive, children, variant = 'primary', duration = 3000 }: ToastProps) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const getColors = () => {
+      switch (variant) {
+          case 'primary':
+              return 'border-black bg-orange-400';
+          case 'secondary':
+              return 'border-black bg-pink-500';
+          case 'light':
+              return 'border-black bg-slate-50';
+          case 'dark':
+              return 'border-white/10 bg-zinc-900 text-white';
+          case 'blue':
+              return 'border-black bg-blue-500';
+          case 'yellow':
+              return 'border-black bg-[#f7cb46]';
+          case 'green':
+              return 'border-black bg-green-500';
+          case 'red':
+              return 'border-black bg-red-500';
+          case 'pink':
+              return 'border-black bg-[#ff7d7d]';
+          default:
+              return 'border-black bg-orange-500';
+      }
+  }
+
+    useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
+
+        if (active) {
+            setIsVisible(true);
+            timeoutId = setTimeout(() => {
+                setIsVisible(false);
+                setActive(false);
+            }, duration);
+        }
+
+        return () => clearTimeout(timeoutId);
+
+    }, [active, setActive, duration]);
+
+    const closeToast = () => {
+        setIsVisible(false);
+        setTimeout(() => {
+            setActive(false);
+        }, 300);
+    };
+
+    return (
+        <div
+            role="dialog"
+            aria-modal="true"
+            style={{
+                opacity: isVisible ? '1' : '0',
+                visibility: isVisible ? 'visible' : 'hidden',
+                transition: 'opacity 0.3s ease, visibility 0.3s ease',
+            }}
+            className="fixed w-fit h-fit right-5 bottom-5 z-50 flex items-start justify-start"
+        >
+            <div
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                    transform: `translateX(${isVisible ? '0px' : '300px'})`,
+                    transition: 'transform 0.3s ease',
+                }}
+                className={`z-10 w-[300px] overflow-y-auto border-2 border-black ${getColors()} p-2 shadow`}
+            >
+                {children}
+            </div>
+        </div>
+    );
+}
