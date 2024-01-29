@@ -3,7 +3,7 @@ import { useState } from "react";
 import { HiExclamation } from  "react-icons/hi"
 
 import Toast from "@/components/neobruu/Toast";
-import Button from "@/components/neobruu/Button";
+import {Button} from "@/components/neobruu/Button";
 
 export default function ToastExample() {
   const [showToast, setShowToast] = useState(false);

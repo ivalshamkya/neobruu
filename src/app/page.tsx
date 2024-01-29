@@ -1,6 +1,6 @@
 "use client"
 
-import Button from '@/components/neobruu/Button'
+import {Button} from '@/components/neobruu/Button'
 import Image from 'next/image'
 import { IoLogoGithub } from 'react-icons/io'
 import { motion } from 'framer-motion'
@@ -21,7 +21,7 @@ export default function Home() {
           <div className='flex flex-wrap justify-center gap-2.5 md:gap-5'>
             <Link
               href={`/docs`}>
-              <Button variant='primary' rounded='lg'>
+              <Button variant='default' rounded='lg'>
                 🚀 Get Started
               </Button>
             </Link>

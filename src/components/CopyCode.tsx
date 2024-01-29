@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Button from './neobruu/Button'
+import { Button } from './neobruu/Button'
 import { IoCheckmark, IoCopy } from 'react-icons/io5'
 
 export default function CopyCode({ code }: { code: string }) {
