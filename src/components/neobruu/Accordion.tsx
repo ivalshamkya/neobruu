@@ -1,8 +1,9 @@
 'use client'
-import React, { ReactElement, createRef, useEffect, useRef, useState } from 'react';
-import { FiChevronDown, FiPlus } from 'react-icons/fi';
+import React, { useEffect, useMemo, useState } from 'react';
+import { cva } from 'class-variance-authority';
+import { FiChevronDown } from 'react-icons/fi';
 
-type Props = {
+type AccordionProps = {
     children: React.ReactNode;
 };
 
@@ -24,10 +25,32 @@ type AccordionItemProps = {
     value: string;
 };
 
-export default function Accordion({ children }: Props) {
+const accordionVariants = cva('border-black bg-orange-500/80 p-5 font-bold', {
+    variants: {
+        variant: {
+            primary: 'bg-orange-500/80',
+            secondary: 'bg-pink-500/80',
+            light: 'bg-slate-50/80',
+            dark: 'bg-zinc-900/80',
+            blue: 'bg-blue-500/80',
+            yellow: 'bg-[#f7cb46]/80',
+            green: 'bg-green-500/80',
+            red: 'bg-red-500/80',
+        }
+    },
+    defaultVariants: {
+        variant: 'primary',
+    },
+});
+
+const Accordion: React.FC<AccordionProps> & {
+    Item: React.FC<AccordionItemProps & AccordionContentProps & AccordionTriggerProps>,
+    Trigger: React.FC<AccordionTriggerProps>,
+    Content: React.FC<AccordionContentProps>,
+} = ({ children }) => {
     const [contentStates, setContentStates] = useState<{ [key: string]: boolean }>({});
     const [contentHeights, setContentHeights] = useState<{ [key: string]: string }>({});
-    const contentRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {};
+    const contentRefs: { [key: string]: React.RefObject<HTMLDivElement> } = useMemo(() => ({}), []);
 
     useEffect(() => {
         const updatedContentStates: { [key: string]: boolean } = {};
@@ -42,7 +65,7 @@ export default function Accordion({ children }: Props) {
 
         setContentHeights(updatedContentHeights);
         setContentStates(updatedContentStates);
-    }, []);
+    }, [contentRefs]);
 
     const handleToggleContent = (key: string) => {
         setContentStates((prevContentStates) => {
@@ -59,16 +82,15 @@ export default function Accordion({ children }: Props) {
         });
     };
 
-
     return (
         <div className="w-full max-w-[500px] border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
             {React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
                     if (child.type === Accordion.Item) {
                         const { children, value } = child.props as AccordionItemProps;
-                        contentRefs[value] = createRef<HTMLDivElement>();
+                        contentRefs[value] = React.createRef<HTMLDivElement>();
 
-                        return React.cloneElement(child as ReactElement<AccordionItemProps & AccordionContentProps & AccordionTriggerProps>, {
+                        return React.cloneElement(child as React.ReactElement<AccordionItemProps & AccordionContentProps & AccordionTriggerProps>, {
                             key: value,
                             contentRef: contentRefs[value],
                             showContent: contentStates[value] || false,
@@ -90,18 +112,18 @@ Accordion.Item = function AccordionItem({
     contentHeight,
     contentRef,
     setShowContent,
-}: AccordionItemProps & AccordionContentProps & AccordionTriggerProps) {
+}) {
     return (
         <div>
             {React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
                     if (child.type === Accordion.Trigger) {
-                        return React.cloneElement(child as ReactElement<AccordionTriggerProps>, {
+                        return React.cloneElement(child as React.ReactElement<AccordionTriggerProps>, {
                             showContent,
                             setShowContent,
                         });
                     } else if (child.type === Accordion.Content) {
-                        return React.cloneElement(child as ReactElement<AccordionContentProps>, {
+                        return React.cloneElement(child as React.ReactElement<AccordionContentProps>, {
                             showContent,
                             contentHeight,
                             contentRef,
@@ -114,12 +136,12 @@ Accordion.Item = function AccordionItem({
     );
 };
 
-Accordion.Trigger = function AccordionTrigger({ children, showContent, setShowContent }: AccordionTriggerProps) {
+Accordion.Trigger = function AccordionTrigger({ children, showContent, setShowContent }) {
     return (
         <button
             role="button"
             aria-expanded={showContent}
-            className="flex w-full items-center justify-between border-b border-black bg-orange-500/80 p-5 font-bold"
+            className={`flex w-full items-center justify-between border-b border-black ${accordionVariants()}`}
             onClick={() => {
                 if (setShowContent) {
                     setShowContent(!showContent);
@@ -140,7 +162,7 @@ Accordion.Content = function AccordionContent({
     showContent,
     contentHeight,
     contentRef,
-}: AccordionContentProps) {
+}) {
     return (
         <div
             ref={contentRef}
@@ -153,3 +175,7 @@ Accordion.Content = function AccordionContent({
         </div>
     );
 };
+
+Accordion.displayName = 'Accordion';
+
+export default Accordion;

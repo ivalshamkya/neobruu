@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { VariantProps, cva } from 'class-variance-authority';
+import { cn } from '@/lib/utils';
 
 type Props = {
     children: React.ReactNode;
@@ -51,7 +52,7 @@ const Alert: React.FC<Props & VariantProps<typeof alertVariants>> = ({
     if (!visible) return null;
 
     return (
-        <div className={`border-2 ${alertVariants({ variant, rounded })}`} {...props}>
+        <div className={`border-2 ${cn(alertVariants({ variant, rounded }))}`} {...props}>
             <div className='flex items-center gap-3'>
                 <span className='text-2xl'>{icon}</span>
                 {children}
@@ -62,5 +63,7 @@ const Alert: React.FC<Props & VariantProps<typeof alertVariants>> = ({
         </div>
     );
 };
+
+Alert.displayName = 'Alert';
 
 export default Alert;

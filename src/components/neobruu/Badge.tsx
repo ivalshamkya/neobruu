@@ -1,5 +1,6 @@
 import React from 'react';
 import { VariantProps, cva } from 'class-variance-authority';
+import { cn } from '@/lib/utils';
 
 type Props = {
     text: string;
@@ -42,10 +43,12 @@ const Badge: React.FC<Props & VariantProps<typeof badgeVariants>> = ({
     ...props
 }) => {
     return (
-        <span className={`border p-1 ${badgeVariants({ variant, rounded })}`} {...props}>
+        <span className={`border p-1 ${cn(badgeVariants({ variant, rounded }))}`} {...props}>
             {text}
         </span>
     );
 };
+
+Badge.displayName = 'Badge';
 
 export default Badge;

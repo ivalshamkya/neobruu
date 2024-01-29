@@ -1,14 +1,18 @@
 'use client'
 import Textarea from '@/components/neobruu/Textarea';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 
 export default function TextareaExample() {
     const [value, setValue] = useState<string>('')
 
+    const handleInput = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        setValue(e.target.value)
+    }
+
     return (
         <div className="flex gap-3">
-            <Textarea name='text' value={value} placeholder='Textarea' onChange={setValue} rows={5} variant='primary' rounded='md' />
+            <Textarea name='text' value={value} placeholder='Textarea' onChange={handleInput} rows={5} variant='primary' rounded='md' />
         </div>
     );
 }
