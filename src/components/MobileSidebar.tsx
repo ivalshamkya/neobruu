@@ -47,7 +47,7 @@ export default function MobileSidebar() {
                                 {item.name}
                             </span>
                             {item.isNew && (
-                                <Badge text='New' rounded='md' variant='secondary' />
+                                <Badge text='New' rounded='md' variant='green' />
                             )}
                         </Link>
                     ))}

@@ -6,9 +6,7 @@ import { CgClose, CgSearch } from 'react-icons/cg';
 import { MdAdd, MdKeyboardCommandKey } from "react-icons/md";
 import { RxComponent1 } from "react-icons/rx";
 
-type SearchBarProps = {};
-
-export default function SearchBar({ }: SearchBarProps) {
+export default function SearchBar() {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [searchValue, setSearchValue] = useState<string>('');
   const [searchResults, setSearchResults] = useState<typeof components>([]);
@@ -17,7 +15,6 @@ export default function SearchBar({ }: SearchBarProps) {
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
-        setSearchResults(components);
         setIsSearchBarOpen((prev) => !prev);
       }
     };
@@ -32,6 +29,7 @@ export default function SearchBar({ }: SearchBarProps) {
   useEffect(() => {
     if (isSearchBarOpen && inputRef.current) {
       inputRef.current.focus();
+      setSearchResults(components);
     }
   }, [isSearchBarOpen]);
 
@@ -56,16 +54,16 @@ export default function SearchBar({ }: SearchBarProps) {
     <div className="relative">
       <button
         onClick={() => setIsSearchBarOpen(true)}
-        className="flex items-center gap-2 rounded-md border border-black p-[5px] md:p-[10px] text-zinc-700 text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none transition-all focus:translate-x-[3px] focus:translate-y-[3px] focus:shadow-none"
+        className="flex items-center gap-2 md:gap-10 rounded-md border border-black p-[5px] md:p-[10px] text-zinc-700 text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] outline-none transition-all focus:translate-x-[3px] focus:translate-y-[3px] focus:shadow-none"
       >
         Search doc...
-        <span className='flex items-center md:gap-0.5 bg-zinc-200 p-0.5 md:p-1 rounded text-xs text-primary'>
+        <span className='flex items-center gap-0.5 md:gap-1 bg-zinc-200 p-0.5 md:p-1 rounded text-xs text-primary'>
           <MdKeyboardCommandKey /> <MdAdd /> K
         </span>
       </button>
       {isSearchBarOpen && (
-        <div className='fixed top-0 left-0 w-screen h-screen bg-black/50 z-50 grid place-items-center'>
-          <div className="max-w-xl w-full bg-white border border-primary rounded-lg shadow-md dark:bg-zinc-900">
+        <div className='fixed top-0 left-0 w-screen h-screen bg-black/80 z-50 grid place-items-center'>
+          <div className="max-w-[345px] md:max-w-xl w-full bg-white border-2 border-primary rounded-lg shadow-md dark:bg-zinc-900">
             <div className='relative w-full h-fit flex items-center rounded-lg overflow-hidden'>
               <CgSearch className="text-lg text-zinc-500 absolute left-2 top-1/4" />
               <input
