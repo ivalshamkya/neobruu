@@ -65,7 +65,7 @@ const Accordion: React.FC<AccordionProps> & {
 
         setContentHeights(updatedContentHeights);
         setContentStates(updatedContentStates);
-    }, [contentRefs, contentStates]);
+    }, [contentRefs]);
 
     const handleToggleContent = (key: string) => {
         setContentStates((prevContentStates) => {
