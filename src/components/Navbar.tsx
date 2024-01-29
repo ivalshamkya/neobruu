@@ -7,7 +7,7 @@ import MobileSidebar from "@/components/MobileSidebar";
 
 function Navbar() {
   return (
-    <nav className="fixed left-0 top-0 z-10 mx-auto flex h-16 md:h-20 w-full items-center border-b border-black bg-white px-3 md:px-5 dark:bg-zinc-900">
+    <nav className="fixed left-0 top-0 z-10 mx-auto flex h-16 md:h-20 w-full items-center border-b border-black bg-white px-3 md:px-12 dark:bg-zinc-900">
       <div className="mx-auto flex w-full max-w-full items-center justify-between">
         <div className="flex gap-3 items-center">
           <div className="block md:hidden">
