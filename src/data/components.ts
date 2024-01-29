@@ -6,6 +6,8 @@ import Badge from '@/components/neobruu/Badge'
 import Card from '@/components/neobruu/Card'
 import Checkbox from '@/components/neobruu/Checkbox'
 import Dropdown from '@/components/neobruu/Dropdown'
+import Drawer from '@/components/neobruu/Drawer'
+import Dialog from '@/components/neobruu/Dialog'
 import Input from '@/components/neobruu/Input'
 import Toast from '@/components/neobruu/Toast'
 import Tooltip from '@/components/neobruu/Tooltip'
@@ -25,8 +27,8 @@ import InputExample from '@/components/example/InputExample'
 import TextareaExample from '@/components/example/TextareaExample'
 import CardExample from '@/components/example/CardExample'
 import AccordionExample from '@/components/example/AccordionExample'
-import Drawer from '@/components/neobruu/Drawer'
 import DrawerExample from '@/components/example/DrawerExample'
+import DialogExample from '@/components/example/DialogExample'
 
 type ComponentObj = {
   name: string
@@ -112,7 +114,6 @@ const components: ComponentObj[] = [
   {
     name: 'Textarea',
     sub: 'Lorem ipsum dolor sit amet, consectetur',
-    isNew: true,
     component: Textarea,
     exampleComponent: TextareaExample,
   },
@@ -120,7 +121,6 @@ const components: ComponentObj[] = [
   {
     name: 'Card',
     sub: 'Lorem ipsum dolor sit amet, consectetur',
-    isNew: true,
     component: Card,
     exampleComponent: CardExample,
   },
@@ -128,7 +128,6 @@ const components: ComponentObj[] = [
   {
     name: 'Accordion',
     sub: 'Lorem ipsum dolor sit amet, consectetur',
-    isNew: true,
     component: Accordion,
     exampleComponent: AccordionExample,
   },
@@ -139,6 +138,14 @@ const components: ComponentObj[] = [
     isNew: true,
     component: Drawer,
     exampleComponent: DrawerExample,
+  },
+
+  {
+    name: 'Dialog',
+    sub: 'Lorem ipsum dolor sit amet, consectetur',
+    isNew: true,
+    component: Dialog,
+    exampleComponent: DialogExample,
   },
 ];
 
