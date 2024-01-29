@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import Dialog from "@/components/neobruu/Dialog";
-import Button from "@/components/neobruu/Button";
+import {Button} from "@/components/neobruu/Button";
 
 export default function DialogExample() {
   const [showDialog, setShowDialog] = useState(false);
@@ -26,7 +26,7 @@ export default function DialogExample() {
           </Dialog.Content>
           <Dialog.Footer>
             <div className="flex gap-3">
-                  <Button rounded="none">Okay</Button>
+                  <Button variant={"default"}>Okay</Button>
                 </div>
           </Dialog.Footer>
         </Dialog>

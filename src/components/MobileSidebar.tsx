@@ -5,7 +5,6 @@ import Link from "next/link";
 import { HiMenuAlt2 } from "react-icons/hi"
 import components from "@/data/components";
 import Drawer from "@/components/neobruu/Drawer";
-import Button from "@/components/neobruu/Button";
 import Badge from "@/components/neobruu/Badge";
 
 export default function MobileSidebar() {

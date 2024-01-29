@@ -1,7 +1,7 @@
 'use client'
 import Drawer from "@/components/neobruu/Drawer";
 import { useState } from "react";
-import Button from "@/components/neobruu/Button";
+import { Button } from "@/components/neobruu/Button";
 
 export default function DrawerExample() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
