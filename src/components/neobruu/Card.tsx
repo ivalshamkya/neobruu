@@ -1,8 +1,10 @@
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
+import { VariantProps, cva } from 'class-variance-authority';
+import { cn } from '@/lib/utils';
 
 type CardProps = {
-    rounded?: 'none' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
-    children: React.ReactNode
+    children: React.ReactNode;
 };
 
 type CardHeaderProps = {
@@ -17,9 +19,31 @@ type CardBodyProps = {
     children: React.ReactNode;
 };
 
-function Card({ rounded = 'none', children }: CardProps) {
+const cardVariants = cva(
+    'w-full max-w-[350px] h-full overflow-hidden border-black border-2 shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white',
+    {
+        variants: {
+            rounded: {
+                none: 'rounded-none',
+                sm: 'rounded-sm',
+                md: 'rounded-md',
+                lg: 'rounded-lg',
+                xl: 'rounded-xl',
+            },
+        },
+        defaultVariants: {
+            rounded: 'none',
+        },
+    }
+);
+
+const Card: React.FC<CardProps & VariantProps<typeof cardVariants>> & {
+    Header: React.FC<CardHeaderProps>;
+    Footer: React.FC<CardFooterProps>;
+    Body: React.FC<CardBodyProps>;
+} = ({ rounded = 'none', children, ...props }) => {
     return (
-        <div className={`w-full max-w-[350px] h-full border-black border-2 rounded-${rounded} shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white`}>
+        <div className={`${cn(cardVariants({ rounded }))}`} {...props}>
             {children}
         </div>
     );
@@ -27,24 +51,25 @@ function Card({ rounded = 'none', children }: CardProps) {
 
 Card.Header = function CardHeader({ imageUrl }: CardHeaderProps) {
     return (
-        <a href="" className="relative block w-full max-h-[300px] min-h-[250px] cursor-pointer">
-                <Image
-                    src={imageUrl}
-                    alt="thumbnail"
-                    fill={true}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                />
-        </a>
+        <div className="relative block w-full max-h-[300px] min-h-[250px]">
+            <Image
+                src={imageUrl}
+                alt="thumbnail"
+                layout="fill"
+                objectFit="cover"
+                loading="lazy"
+            />
+        </div>
     );
-}
+};
+
 Card.Footer = function CardFooter({ children }: CardFooterProps) {
     return (
         <div className="px-6 py-5 text-left h-full">
             {children}
         </div>
     );
-}
+};
 
 Card.Body = function CardBody({ children }: CardBodyProps) {
     return (
@@ -52,6 +77,8 @@ Card.Body = function CardBody({ children }: CardBodyProps) {
             {children}
         </div>
     );
-}
+};
+
+Card.displayName = 'Card';
 
 export default Card;

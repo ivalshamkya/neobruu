@@ -4,7 +4,7 @@ import { Button } from "@/components/neobruu/Button";
 export default function CardExample() {
   return (
     <div className="flex gap-3">
-      <Card rounded="none">
+      <Card rounded="xl">
         <Card.Header imageUrl="/aiko.jpeg" />
         <Card.Body>
           <h1 className="text-2xl font-bold mb-2">Aiko 🐈</h1>
