@@ -23,13 +23,20 @@ export const metadata: Metadata = {
   authors: [{ name: 'Ival Shamkya', url: 'https://github.com/ivalshamkya' }],
   openGraph: {
     type: 'website',
-    description:
-      "'Neo-Brutalist reusable components written in React and Tailwind.'",
+    description: 'Neo-Brutalism reusable components written in Reactjs and TailwindCSS.',
     images: ['https://neobruu.vercel.app/mockup.png'],
     url: 'https://neobruu.vercel.app/',
     title: 'NeoBruu',
   },
-}
+  twitter: {
+    card: 'summary_large_image',
+    site: 'https://neobruu.vercel.app/',
+    title: 'NeoBruu',
+    description: 'Neo-Brutalism reusable components written in Reactjs and TailwindCSS.',
+    images: 'https://neobruu.vercel.app/mockup.png',
+  },
+};
+
 
 export default function RootLayout({
   children,
