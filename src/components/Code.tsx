@@ -13,7 +13,7 @@ const Code = async ({ code, header }: { code: string; header?: string }) => {
         </div>
       )}
       <div
-        className="code-content p-5 overflow-x-auto h-[400px]"
+        className="code-content p-5 overflow-x-auto max-h-[500px]"
         dangerouslySetInnerHTML={{ __html: await highlight(code) }}
       />
     </div>

@@ -17,7 +17,7 @@ export default function InputExample() {
 
     return (
         <div className="flex flex-wrap gap-3">
-            <Input type='text' name='text' value={value1} placeholder='Text' onChange={handleInput1} variant='dark' rounded='full'></Input>
+            <Input type='text' name='text' value={value1} placeholder='Text' onChange={handleInput1} variant='light' rounded='full'></Input>
             <Input type='text' name='text' value={value2} placeholder='Text' onChange={handleInput2} rounded='md'></Input>
         </div>
     );

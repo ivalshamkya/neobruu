@@ -42,110 +42,96 @@ type ComponentObj = {
 
 const components: ComponentObj[] = [
   {
-    name: 'Button',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Button,
-    exampleComponent: ButtonExample,
-  },
-
-  {
-    name: 'Toast',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Toast,
-    exampleComponent: ToastExample,
-  },
-
-  {
-    name: 'Alert',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Alert,
-    exampleComponent: AlertExample,
-  },
-
-  {
-    name: 'Badge',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Badge,
-    exampleComponent: BadgeExample,
-  },
-
-  {
-    name: 'Checkbox',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Checkbox,
-    exampleComponent: CheckboxExample,
-  },
-
-  {
-    name: 'Avatar',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Avatar,
-    exampleComponent: AvatarExample,
-  },
-
-  {
-    name: 'Tooltip',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Tooltip,
-    exampleComponent: TooltipExample,
-  },
-
-  {
-    name: 'Dropdown',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Dropdown,
-    exampleComponent: DropdownExample,
-  },
-
-  {
-    name: 'Tabs',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Tabs,
-    exampleComponent: TabsExample,
-  },
-
-  {
-    name: 'Input',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Input,
-    exampleComponent: InputExample,
-  },
-
-  {
-    name: 'Textarea',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Textarea,
-    exampleComponent: TextareaExample,
-  },
-
-  {
-    name: 'Card',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    component: Card,
-    exampleComponent: CardExample,
-  },
-
-  {
     name: 'Accordion',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
+    sub: 'A collapsible content structure for organizing information efficiently.',
     component: Accordion,
     exampleComponent: AccordionExample,
   },
-
+  {
+    name: 'Alert',
+    sub: 'Provides a mechanism for displaying important messages or notifications to users within the application interface.',
+    component: Alert,
+    exampleComponent: AlertExample,
+  },
+  {
+    name: 'Avatar',
+    sub: 'Represents a user or entity with a visual representation.',
+    component: Avatar,
+    exampleComponent: AvatarExample,
+  },
+  {
+    name: 'Badge',
+    sub: 'Small visual indicator typically used to convey status, notification count, or other contextual information within the user interface.',
+    component: Badge,
+    exampleComponent: BadgeExample,
+  },
+  {
+    name: 'Button',
+    sub: 'Clickable element for user interaction.',
+    component: Button,
+    exampleComponent: ButtonExample,
+  },
+  {
+    name: 'Card',
+    sub: 'Use these responsive card components to show data entries and information to your users in multiple forms and contexts such as for your blog, application, user profiles, and more.',
+    component: Card,
+    exampleComponent: CardExample,
+  },
+  {
+    name: 'Checkbox',
+    sub: 'Interactive element allowing users to select or deselect options within forms or lists.',
+    component: Checkbox,
+    exampleComponent: CheckboxExample,
+  },
+  {
+    name: 'Dialog',
+    sub: 'Overlay component used to display important information, receive user input, or confirm actions within the application interface.',
+    isNew: true,
+    component: Dialog,
+    exampleComponent: DialogExample,
+  },
   {
     name: 'Drawer',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
+    sub: 'Sliding panel or container typically used for navigation, displaying additional content, or providing contextual options within the application interface.',
     isNew: true,
     component: Drawer,
     exampleComponent: DrawerExample,
   },
-
   {
-    name: 'Dialog',
-    sub: 'Lorem ipsum dolor sit amet, consectetur',
-    isNew: true,
-    component: Dialog,
-    exampleComponent: DialogExample,
+    name: 'Dropdown',
+    sub: 'Interactive menu or list that expands or collapses to display a selection of options or actions for the user to choose from.',
+    component: Dropdown,
+    exampleComponent: DropdownExample,
+  },
+  {
+    name: 'Input',
+    sub: 'Interactive field for users to enter or edit text, numbers, or other data within forms or input fields.',
+    component: Input,
+    exampleComponent: InputExample,
+  },
+  {
+    name: 'Tabs',
+    sub: 'Navigation element used to organize content into separate sections or categories, allowing users to switch between them to access different sets of information or functionality.',
+    component: Tabs,
+    exampleComponent: TabsExample,
+  },
+  {
+    name: 'Textarea',
+    sub: 'Multiline input field allowing users to enter or edit longer pieces of text or content within forms or input areas.',
+    component: Textarea,
+    exampleComponent: TextareaExample,
+  },
+  {
+    name: 'Toast',
+    sub: 'Temporary notification or message displayed to users, provide feedback or alert about a specific event or action.',
+    component: Toast,
+    exampleComponent: ToastExample,
+  },
+  {
+    name: 'Tooltip',
+    sub: 'Small informational pop-up boxes that appear when users hover over an element, providing additional context or descriptions about the element or its functionality.',
+    component: Tooltip,
+    exampleComponent: TooltipExample,
   },
 ];
 

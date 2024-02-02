@@ -25,8 +25,8 @@ const buttonVariants = cva(
       },
       size: {
         default: 'h-10 py-2 px-4 text-sm md:text-lg',
-        sm: 'h-9 px-2 rounded-md text-sm md:text-lg',
-        lg: 'h-10 md:h-12 px-5 md:px-8 rounded-md text-sm md:text-lg',
+        sm: 'h-9 px-2 text-sm md:text-lg',
+        lg: 'h-10 md:h-12 px-5 md:px-8 text-sm md:text-lg',
       },
       rounded: {
         none: 'rounded-none',
@@ -40,7 +40,7 @@ const buttonVariants = cva(
     defaultVariants: {
       variant: 'default',
       size: 'lg',
-      rounded: 'none'
+      rounded: 'sm'
     },
   }
 )
@@ -52,12 +52,12 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, children, href, variant, size, ...props }, ref) => {
+  ({ className, children, href, variant, size, rounded, ...props }, ref) => {
     if (href) {
       return (
         <Link
           href={href}
-          className={cn(buttonVariants({ variant, size, className }))}
+          className={cn(buttonVariants({ variant, rounded, size, className }))}
         >
           {children}
         </Link>
@@ -65,7 +65,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     }
     return (
       <button
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, rounded, size, className }))}
         ref={ref}
         {...props}
       >

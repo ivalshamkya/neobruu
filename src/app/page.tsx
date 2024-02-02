@@ -35,30 +35,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className='absolute bottom-36 md:bottom-52 right-5'>
-          <div className='relative'>
-            <Image src="/star.svg" alt="star" fill={true} className='w-7 md:w-10 rotate-45' />
-          </div>
-        </div>
-        <div className='absolute bottom-20 right-5 '>
-          <div className='relative'>
-        <Image src="/star.svg" alt="star" fill={true} className='w-16 md:w-32 rotate-6' />
-          </div>
-        </div>
-        <motion.div
-          animate={{ scale: 1.1 }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeIn' }}
-          className='absolute top-24 left-5 w-16 md:w-32'
-        >
-          <div className='relative'>
-
-          <Image
-            src="/heart.svg"
-            alt="Spinning Image"
-            fill={true}
-          />
-          </div>
-        </motion.div>
       </div>
       <Footer></Footer>
     </main>

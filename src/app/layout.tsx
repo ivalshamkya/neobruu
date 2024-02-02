@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     description:
       "'Neo-Brutalist reusable components written in React and Tailwind.'",
-    images: ['https://neobrutalism-components.vercel.app/preview.png'],
+    images: ['https://neobruu.vercel.app/mockup.png'],
     url: 'https://neobruu.vercel.app/',
     title: 'NeoBruu',
   },
