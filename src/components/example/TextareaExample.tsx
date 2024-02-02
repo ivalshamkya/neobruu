@@ -12,7 +12,7 @@ export default function TextareaExample() {
 
     return (
         <div className="flex gap-3">
-            <Textarea name='text' value={value} placeholder='Textarea' onChange={handleInput} rows={5} variant='primary' rounded='md' />
+            <Textarea name='text' value={value} placeholder='Textarea' onChange={handleInput} rows={5} variant='light' rounded='md' />
         </div>
     );
 }
