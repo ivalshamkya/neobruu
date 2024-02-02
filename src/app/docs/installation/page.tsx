@@ -8,7 +8,7 @@ export default function Installation() {
       <h2 className="text-4xl font-bold">Installation</h2>
 
       <div className="mt-8 text-lg font-light leading-relaxed">
-        These components are styled using <a href="https://tailwindcss.com/" className="underline">Tailwind CSS</a> and feature icons powered by <a href="https://react-icons.github.io/react-icons/" className="underline">react-icons</a> (although you're free to use any other icon library of your choice).
+        These components are styled using <a href="https://tailwindcss.com/" className="underline">Tailwind CSS</a> and feature icons powered by <a href="https://react-icons.github.io/react-icons/" className="underline">react-icons</a> (although you`re free to use any other icon library of your choice).
       </div>
 
       <div className="mt-8 text-lg font-light leading-relaxed">
@@ -43,7 +43,7 @@ export function cn(...inputs: ClassValue[]) {
         <h5 className="text-lg font-medium mt-5">Customization Instructions:</h5>
         Choose any component you find useful, copy it to your project, and tailor it to meet your specific requirements. Remember, these components are customizable and adaptable to suit your needs.
         <br /><br />
-        Keep in mind that these components are designed to kickstart your journey into neobrutalism. It's up to you to enhance their reusability and accessibility.
+        Keep in mind that these components are designed to kickstart your journey into neobrutalism. It`s up to you to enhance their reusability and accessibility.
       </div>
 
       <Pagination
