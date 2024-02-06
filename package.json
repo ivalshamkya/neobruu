@@ -1,33 +1,25 @@
 {
-  "name": "neobruu",
-  "version": "0.1.0",
+  "name": "neobruu-turbo",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
-    "framer-motion": "^10.18.0",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^4.12.0",
-    "shiki": "^0.14.7",
-    "tailwind-merge": "^2.2.1"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "@neobruu/eslint-config": "workspace:*",
+    "@neobruu/typescript-config": "workspace:*",
+    "prettier": "^3.1.1",
+    "eslint": "^8.56.0",
+    "eslint-config-custom": "*",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "turbo": "latest",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
   }
 }
