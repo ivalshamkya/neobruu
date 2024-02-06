@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NeoBruu
 
-## Getting Started
+Welcome to NeoBruu – a collection of Neo-Brutalist reusable components written in React and Tailwind CSS.
 
-First, run the development server:
+![613shots_so](https://github.com/ivalshamkya/neobruu/assets/85030029/c682e7ef-ce87-4068-a87b-0c251b7fc3b2)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+NeoBruu is a curated collection of type-safe components designed to embrace the Neo-Brutalist design ethos while prioritizing simplicity, functionality, and accessibility. Whether you're building a personal project, a startup, or an enterprise-level application, NeoBruu provides the building blocks you need to create stunning and efficient user interfaces.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Neo-Brutalist Design**: Embrace unconventional design elements and distinctive color palettes.
+- **React and Tailwind CSS**: Utilize React for component-based development and Tailwind CSS for rapid styling.
+- **Type-Safe Components**: Ensure type safety and maintainability with type-safe components.
+- **Open-Source**: Contribute to the project, suggest new features, and collaborate with the community.
 
-## Learn More
+## Documentation
 
-To learn more about Next.js, take a look at the following resources:
+Visit [http://neobruu.vercel.app/docs](http://neobruu.vercel.app/docs) to view the documentation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We welcome contributions from the community! Feel free to open issues, submit pull requests, or suggest new ideas to help improve NeoBruu.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Licensed under the [MIT license](https://github.com/ivalshamkya/neobruu/blob/main/LICENSE).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
