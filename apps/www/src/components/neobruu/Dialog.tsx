@@ -20,7 +20,7 @@ type DialogFooterProps = {
 };
 
 const dialogVariants = cva(
-  "z-10 w-[425px] md:w-[500px] overflow-y-auto border-2 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
+  "z-10 w-[calc(93svw)] md:w-[500px] overflow-y-auto border-2 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
   {
     variants: {
       variant: {

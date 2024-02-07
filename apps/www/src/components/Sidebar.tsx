@@ -10,7 +10,7 @@ export default function Sidebar() {
   const year = new Date().getFullYear();
 
   return (
-    <aside className="scrollbar fixed top-20 h-[calc(100vh-80px)] max-h-[calc(100vh-80px)] w-[303px] py-7 bg-[#ff7d7d] overflow-y-auto border-r-4 border-black">
+    <aside className="scrollbar fixed top-20 h-[calc(100vh-80px)] max-h-[calc(100vh-80px)] w-[303px] py-7 bg-[#ff7a7a] overflow-y-auto border-r-4 border-black">
       <div className="block border-black p-4 text-xl font-bold uppercase">
         Getting Started
       </div>

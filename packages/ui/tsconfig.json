@@ -1,7 +1,8 @@
 {
   "extends": "@neobruu/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "module": "NodeNext"
   },
   "include": ["../../apps/www/src/components/neobruu", "../../apps/www/src/components/neobruu"],
   "exclude": ["node_modules", "dist"]

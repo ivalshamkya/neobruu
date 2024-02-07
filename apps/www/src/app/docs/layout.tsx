@@ -16,7 +16,7 @@ export default function DocsLayout({
       <div className="hidden md:block">
         <Sidebar />
       </div>
-      <div className="docs md:ml-[300px] min-h-[100vh] w-auto md:w-[full-250px] bg-[#00EB90] px-5 pt-[80px] border-l">
+      <div className="docs md:ml-[300px] min-h-[100vh] w-auto md:w-[full-250px] bg-[#4dfe4d] px-5 pt-[80px] border-l">
         <div className="mx-auto w-full max-w-[700px] pt-20">{children}</div>
       </div>
     </>

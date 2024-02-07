@@ -88,5 +88,5 @@
 .square-pattern {
   opacity: 1;
   background-image:  linear-gradient(#fff6f4 3px, transparent 3px), linear-gradient(to right, #fff6f4 3px, #fff 1px);
-  background-size: 40px 40px;
+  background-size: 70px 70px;
 }
