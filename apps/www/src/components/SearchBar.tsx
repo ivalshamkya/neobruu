@@ -86,8 +86,11 @@ export default function SearchBar() {
                   onClick={handleClose}
                 >
                   <button className="w-full flex items-center gap-3 p-2 text-left rounded hover:bg-zinc-300">
-                    <RxComponent1 className="text-xs" />
-                    <h1 className="font-light">{result.name}</h1>
+                    <RxComponent1 className="w-4" />
+                    <div className="w-full">
+                      <h1 className="font-light">{result.name}</h1>
+                      <h1 className="text-xs font-light line-clamp-1">{result.sub}</h1>
+                    </div>
                   </button>
                 </Link>
               ))}
