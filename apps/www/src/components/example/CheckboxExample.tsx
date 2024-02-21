@@ -5,8 +5,8 @@ export default function CheckboxExample() {
     <div className="flex gap-3">
       <Checkbox />
       <Checkbox rounded="sm" variant="red" />
-      <Checkbox rounded="lg" variant="yellow" />
-      <Checkbox rounded="full" variant="blue" />
+      <Checkbox rounded="md" variant="yellow" />
+      <Checkbox rounded="lg" variant="blue" />
     </div>
   );
 }

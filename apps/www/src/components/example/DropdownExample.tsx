@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Dropdown from "@/components/neobruu/Dropdown";
 
 export default function DropdownExample() {

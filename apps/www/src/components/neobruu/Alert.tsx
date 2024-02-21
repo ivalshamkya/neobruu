@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { VariantProps, cva } from "class-variance-authority";

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import Button from "./neobruu/Button";
 import { IoCheckmark, IoCopy } from "react-icons/io5";

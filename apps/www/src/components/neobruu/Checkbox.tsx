@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { InputHTMLAttributes, useState } from "react";
 import { BsCheck } from "react-icons/bs";
 import { VariantProps, cva } from "class-variance-authority";
@@ -23,7 +23,6 @@ const checkboxVariants = cva(
         md: "rounded-md",
         lg: "rounded-lg",
         xl: "rounded-xl",
-        full: "rounded-full",
       },
     },
     defaultVariants: {
