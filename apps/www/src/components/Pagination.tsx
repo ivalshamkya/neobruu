@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useRouter } from "next/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Button from "@/components/neobruu/Button";

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Button from "@/components/neobruu/Button";
 import { IoLogoGithub } from "react-icons/io";

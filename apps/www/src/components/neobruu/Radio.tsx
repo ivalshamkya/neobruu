@@ -3,8 +3,8 @@ import React, { InputHTMLAttributes, useState } from "react";
 import { BsCheck } from "react-icons/bs";
 import { VariantProps, cva } from "class-variance-authority";
 
-const checkboxVariants = cva(
-  "peer relative appearance-none shrink-0 w-5 h-5 mt-1 rounded border-2 hover:shadow-[2px_2px_0px_0px] focus:outline-none focus:ring-offset-0 focus:ring-1 checked:border-black checked:shadow-[2px_2px_0px_0px] disabled:border-steel-400 disabled:bg-steel-400",
+const radioVariants = cva(
+  "peer relative appearance-none shrink-0 w-5 h-5 mt-1 rounded-full border-2 hover:shadow-[2px_2px_0px_0px] focus:outline-none focus:ring-offset-0 focus:ring-1 checked:border-black checked:shadow-[2px_2px_0px_0px] disabled:border-steel-400 disabled:bg-steel-400",
   {
     variants: {
       variant: {
@@ -17,31 +17,23 @@ const checkboxVariants = cva(
         green: "border-black bg-green-500/50 checked:bg-green-500",
         red: "border-black bg-red-500/50 checked:bg-red-500",
       },
-      rounded: {
-        none: "rounded-none",
-        sm: "rounded-sm",
-        md: "rounded-md",
-        lg: "rounded-lg",
-        xl: "rounded-xl",
-      },
     },
     defaultVariants: {
       variant: "primary",
-      rounded: "none",
     },
   },
 );
 
-const Checkbox: React.FC<
-  InputHTMLAttributes<HTMLInputElement> & VariantProps<typeof checkboxVariants>
-> = ({ variant = "primary", rounded = "none" }) => {
+const Radio: React.FC<
+  InputHTMLAttributes<HTMLInputElement> & VariantProps<typeof radioVariants>
+> = ({ variant = "primary" }) => {
   const [checked, setChecked] = useState<boolean>(false);
 
   return (
     <label className="relative">
       <input
-        type="checkbox"
-        className={`${checkboxVariants({ variant, rounded })}`}
+        type="radio"
+        className={`${radioVariants({ variant })}`}
         checked={checked}
         onClick={() => setChecked(!checked)}
       />
@@ -50,6 +42,6 @@ const Checkbox: React.FC<
   );
 };
 
-Checkbox.displayName = "Checkbox";
+Radio.displayName = "Radio";
 
-export default Checkbox;
+export default Radio;

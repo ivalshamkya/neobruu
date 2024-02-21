@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { VariantProps, cva } from "class-variance-authority";

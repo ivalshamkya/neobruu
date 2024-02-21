@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Tabs from "@/components/neobruu/Tabs";
 
 export default function TabsExample() {

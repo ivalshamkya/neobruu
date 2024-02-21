@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Textarea from "@/components/neobruu/Textarea";
 import { ChangeEvent, useState } from "react";
 

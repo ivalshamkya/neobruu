@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Input from "@/components/neobruu/Input";
 import { ChangeEvent, useState } from "react";
 
