@@ -9,6 +9,7 @@ import Dropdown from "@/components/neobruu/Dropdown";
 import Drawer from "@/components/neobruu/Drawer";
 import Dialog from "@/components/neobruu/Dialog";
 import Input from "@/components/neobruu/Input";
+import Radio from "@/components/neobruu/Radio";
 import Toast from "@/components/neobruu/Toast";
 import Tooltip from "@/components/neobruu/Tooltip";
 import Tabs from "@/components/neobruu/Tabs";
@@ -29,6 +30,7 @@ import CardExample from "@/components/example/CardExample";
 import AccordionExample from "@/components/example/AccordionExample";
 import DrawerExample from "@/components/example/DrawerExample";
 import DialogExample from "@/components/example/DialogExample";
+import RadioExample from "@/components/example/RadioExample";
 
 type ComponentObj = {
   name: string;
@@ -108,6 +110,12 @@ const components: ComponentObj[] = [
     sub: "Interactive field for users to enter or edit text, numbers, or other data within forms or input fields.",
     component: Input,
     exampleComponent: InputExample,
+  },
+  {
+    name: "Radio",
+    sub: "Interactive element allowing users to select or deselect options within forms or lists.",
+    component: Radio,
+    exampleComponent: RadioExample,
   },
   {
     name: "Tabs",
