@@ -31,6 +31,8 @@ import AccordionExample from "@/components/example/AccordionExample";
 import DrawerExample from "@/components/example/DrawerExample";
 import DialogExample from "@/components/example/DialogExample";
 import RadioExample from "@/components/example/RadioExample";
+import Select from "@/components/neobruu/Select";
+import SelectExample from "@/components/example/SelectExample";
 
 type ComponentObj = {
   name: string;
@@ -88,14 +90,12 @@ const components: ComponentObj[] = [
   {
     name: "Dialog",
     sub: "Overlay component used to display important information, receive user input, or confirm actions within the application interface.",
-    isNew: true,
     component: Dialog,
     exampleComponent: DialogExample,
   },
   {
     name: "Drawer",
     sub: "Sliding panel or container typically used for navigation, displaying additional content, or providing contextual options within the application interface.",
-    isNew: true,
     component: Drawer,
     exampleComponent: DrawerExample,
   },
@@ -116,6 +116,14 @@ const components: ComponentObj[] = [
     sub: "Interactive element allowing users to select or deselect options within forms or lists.",
     component: Radio,
     exampleComponent: RadioExample,
+    isNew: true
+  },
+  {
+    name: "Select",
+    sub: "Interactive field for users to enter or edit text, numbers, or other data within forms or Select fields.",
+    component: Select,
+    exampleComponent: SelectExample,
+    isNew: true
   },
   {
     name: "Tabs",
