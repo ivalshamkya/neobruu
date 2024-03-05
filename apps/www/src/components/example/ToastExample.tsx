@@ -1,6 +1,5 @@
 'use client';
 import { useState } from "react";
-import { HiExclamation } from "react-icons/hi";
 
 import Toast from "@/components/neobruu/Toast";
 import Button from "@/components/neobruu/Button";
