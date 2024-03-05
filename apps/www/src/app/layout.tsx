@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import {
-  Inter,
-  IBM_Plex_Mono,
-  Darker_Grotesque,
   Bricolage_Grotesque,
 } from "next/font/google";
 import "./globals.css";

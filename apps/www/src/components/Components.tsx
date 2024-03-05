@@ -1,4 +1,3 @@
-import React from "react";
 import Code from "@/components/Code";
 import ComponentWrapper from "@/components/ComponentWrapper";
 import CopyCode from "@/components/CopyCode";
